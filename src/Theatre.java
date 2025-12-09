@@ -8,15 +8,18 @@ public class Theatre {
         Director director1 = new Director("Первый", "Режиссер", Gender.FEMALE, 15);
         Director director2 = new Director("Второй", "Режиссер", Gender.MALE, 8);
 
-        String musicAuthor = "Музыкальный автор";
-        String choreographer = "Хореограф";
+        /*String musicAuthor = "Музыкальный автор";
+        String choreographer = "Хореограф";*/
+
+        Person musicAuthorPerson = new Person("Музыкальный", "автор", Gender.FEMALE);
+        Person choreographerPerson = new Person("Хореограф", "Классный", Gender.FEMALE);
 
         // 2. Создать три спектакля: обычный, оперный и балет
         Show regularShow = new Show("Обычный", 120, director1);
         Opera opera = new Opera("Оперный", 180, director2,
-                musicAuthor, "Текст либретто оперы", 40);
+                musicAuthorPerson, "Текст либретто оперы", 40);
         Ballet ballet = new Ballet("Балет", 150, director1,
-                musicAuthor, "Текст либретто балета", choreographer);
+                musicAuthorPerson, "Текст либретто балета", choreographerPerson);
 
         System.out.println("Созданы спектакли:");
         System.out.println("1. " + regularShow);
